@@ -3,59 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3 Grid Layout</title>
+    <title>4 Grid Websites</title>
     <style>
-        /* Reset margins to take up the full screen */
+        /* Reset margins so the grid takes up the whole screen */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
 
-        /* Create the 3-column grid */
+        /* Create a 2x2 grid using CSS Grid */
         .grid-container {
             display: grid;
-            /* '1fr' means 1 fraction. Doing it 3 times creates 3 equal columns */
-            grid-template-columns: 1fr 1fr 1fr; 
-            height: 100vh; /* Full screen height */
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            height: 100vh; /* 100% of the viewport height */
+            width: 100vw;  /* 100% of the viewport width */
         }
 
-        /* Style the text boxes inside the grid */
-        .grid-item {
-            display: flex;
-            align-items: center; /* Centers text vertically */
-            justify-content: center; /* Centers text horizontally */
-            text-align: center;
-            border: 2px solid #333;
-            font-size: 24px;
-            font-weight: bold;
-            padding: 20px;
+        /* Style the iframes to fill their grid cells perfectly */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 2px solid black; /* Optional: adds a border between sites */
             box-sizing: border-box;
         }
-
-        /* Give each box a different background color */
-        .box1 { background-color: #ffcccc; } /* Light Red */
-        .box2 { background-color: #ccffcc; } /* Light Green */
-        .box3 { background-color: #ccccff; } /* Light Blue */
     </style>
 </head>
 <body>
 
     <div class="grid-container">
-        <div class="grid-item box1">
-            This is Grid 1<br><br>
-            You can put text, images, or a website here!
-        </div>
-        <div class="grid-item box2">
-            This is Grid 2<br><br>
-            Just writing something here as requested.
-        </div>
-        <div class="grid-item box3">
-            This is Grid 3<br><br>
-            Hello from the third box!
-        </div>
+        <iframe src="https://en.wikipedia.org/wiki/Main_Page"></iframe>
+        <iframe src="https://attendancesdy.sugidigital.org/dashboard/page1></iframe>
+        <iframe src="https://l2sdygrafana.sugidigital.org/d/fe9tzft54x1xcf/line-2-sendayan-oee-dashboard?orgId=1&from=now-5m&to=now&timezone=browser&refresh=5s&tab=transformations"></iframe>
+        <iframe src="https://www.w3.org/"></iframe>
     </div>
 
 </body>
